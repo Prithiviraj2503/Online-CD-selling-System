@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<title>Registration page</title>
+<style>
+body{
+  background-image: url('images/regpk.jpg');
+  background-repeat: repeat;
+  }
+h1{
+color:Yellow;
+background-color:#000000;
+font-family:Arial;
+font-weight:bold;
+text-align:center;
+text-transform:uppercase;
+}
+h2{
+color:DodgerBlue;
+font-family:Arial;
+font-weight:bold;
+text-transform:capitalize;
+}
+.pad{
+background-color:#000000;
+color:#ffffff;
+font-family:Arial;
+font-weight:bold;
+text-align:center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div class="col-md-11" style="background-image:linear-gradient(#ff007f,lime)">
+<h1>register here</h1>
+<h2><marquee>Simply enter the following details to signup with us!!!</marquee></h2>
+<div class="pad">
+<br>
+<form name="registration" action="https:/localhost/oms/php/register.php" method="POST">
+
+<div class="row">
+<div class="col-md-3">Name : </div>
+<div class="col-md-8"><input type="text" name="name" placeholder="Enter your name" required><br><br></div>
+</div>
+
+<div class="row">
+<div class="col-md-3">E-mail: </div> 
+<div class="col-md-8"><input type="email" name="mail" placeholder="Enter your E-mail" required><br><br></div>
+</div>
+
+<div class="row">
+<div class="col-md-3">Contact-No: </div> 
+<div class="col-md-8"><input type="number" name="cont" placeholder="Enter mobile number" required><br><br></div>
+</div>
+
+<div class="row">
+<div class="col-md-3">Gender: </div>
+<div class="col-md-8">
+<input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label>&nbsp&nbsp
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label>&nbsp&nbsp
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br><br></div>
+</div>
+  
+<div class="row">
+<div class="col-md-3">Language: </div>
+<div class="col-md-8">
+<select name="language">
+<option value="all">All</option>
+<option value="tamil">Tamil</option>
+<option value="english">English</option>
+<option value="hindi">Hindi</option>
+<option value="malayalam">Malayalam</option>
+<option value="telungu">Telugu</option>
+<option value="kannadam">Kannadam</option>
+<option value="others">Others</option>
+</select><br><br>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3">Time Prefer: </div> 
+<div class="col-md-8">
+<select name="time">
+<option value="day">Day</option>
+<option value="night">Night</option>
+<option value="weak end">Weak end</option>
+<option value="month end">Month end</option>
+<option value="others">Others</option>
+</select><br><br>
+</div></div>
+
+<div class="row">
+<div class="col-md-3">Age Group: </div> 
+<div class="col-md-8">
+<select name="age">
+<option value="10-20">10-20</option>
+<option value="20-30">20-30</option>
+<option value="30-50">30-50</option>
+<option value="50 above">50 above</option>
+<option value="not prefer">not prefer</option>
+</select><br><br>
+</div></div>
+
+<div class="row">
+<div class="col-md-3">Password: </div> 
+<div class="col-md-8">
+<input type="password" name="pass" required placeholder="enter password" id="pass"><br><br>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3">Confirm password: </div> 
+<div class="col-md-8">
+<input type="password" name="pass" required placeholder="re-enter password" onchange="passcheck()" id="conpas"><br><br>
+<p style="color:red" id="pasp"></p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-3">
+<button type="submit" class="btn btn-success">Signup</button>
+</div>
+&nbsp &nbsp &nbsp &nbsp &nbsp
+<div class="col-md-3">
+<button type="reset" class="btn btn-danger">Reset</button>
+</div>
+</div>
+</form>
+</br>
+<script>
+function passcheck(){
+var pass=document.getElementById("pass");
+var conpas=document.getElementById("conpas");
+if(pass==conpas){
+document.getElementById("pasp").innerHTML="password match";
+}
+else{
+document.getElementById("pasp").innerHTML="password mismatch";
+}
+}
+</script>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+

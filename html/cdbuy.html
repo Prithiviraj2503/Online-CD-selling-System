@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<title>CD buy page</title>
+
+<style>
+.header{
+background-color:#7f00ff;
+color:white;
+font-weight:bold;
+font-size:25px;
+}
+.body{
+background-color:none;
+text-align:center;
+}
+.footer{
+background-color:#7f00ff;
+color:white;
+font-weight:bold;
+font-size:10px;
+}
+</style>
+</head>
+
+<div class="container-fluid">
+
+<header class="header">
+<center>Welcome to Movie Section</center>
+</header>
+<br>
+<marquee><p style="color:red;font-weight:bold;font-size:15px">Kindly Search the Movie name Here, You can contact the owners after getting a result</p></marquee>
+
+<body class="body">
+<br><br>
+<form method="POST" action="https://localhost/oms/php/search.php">
+<input type="text" placeholder="Enter movie name" name="search" required> &nbsp &nbsp &nbsp &nbsp
+<button type="submit" class="btn btn-success">Search..</button>
+</form>
+<br><br><br>
+</body>
+
+<footer class="footer">
+<center>this project for oyester technology internship</center>
+</footer>
+</div>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign In</title>
+<meta name="viewport" content="width=device-width, Initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<div class="container" style="background-color:black; border: 5px solid blue;margin-top:10px;">
+<center>
+<h2 style="color:white"><b>SIGNIN HERE</b></h2><hr>
+<h5 style="color:green;background-color:white;text-decoration:"><marquee><b>Hope you enjoing our service! Stay tuned for more entertainment</b></marquee></h5><br>
+
+<center>
+<p style="color:red">Hello dude! Signin to continue</p>
+<form action="https://localhost/oms/php/signin.php" method="POST">
+<div class="row">
+<div class="col-md-3">
+<label style="background-color:white"><b>  E-mail</b></label>
+</div>
+<div class="col-md-6">
+<input type="email" placeholder="Enter your E-mail" name="mail" required>
+<br></div>
+</div>
+<br>
+<div class="row">
+<div class="col-md-3">
+<label style="background-color:white"><b>Password</b></label>
+</div>
+<div class="col-md-6">
+<input type="password" name="pass" placeholder="Enter your Password" required><br><br>
+</div>
+</div>
+
+<a href="" style="color:cyan;" onclick="forpass()">Forget your password ?</a><br><br>
+
+<div class="row">
+<div class="col-md-3">
+<button type="submit" class="btn btn-success">Submit</button>
+</div>
+
+<div class="col-md-3">
+<button type="reset" class="btn btn-danger">Reset</button>
+</div>
+</div>
+<br><br>
+</form>
+</center>
+
+<script>
+function forpass(){
+var email=prompt("Enter your mail ID");
+if(email!=null){
+var otp=Math.random()*13+4;
+alert("Your OTP is"+otp);
+//if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+//ar str='ABCDEFGHIJKLMNOPQRSTUVWXYZ'+'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+//for(i=0;i<=8;i++)
+}else{
+alert("Enter the valid email");
+}
+}
+</script>
+
+<p style="font-size:18px;color:red">* Don't share your password with anyone</p>
+
+</html>
